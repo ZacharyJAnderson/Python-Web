@@ -1,0 +1,41 @@
+{# REPORT HTML J2 #}
+
+{#
+
+  This Template creates a report page after the user creates a new username.
+  ----> The username is checked and this page give the user feed back on <thead>
+        username they created.
+
+  KEY POINTS:
+    ** Usage of if-else logic with Jinja Templates
+
+    ** Passing variables with Jinja Templates
+
+    ** Using a jumbotron from bootstrap 4. This page does not include any links
+       for bootstrap, another advantage we leverage from extending base.html.j2
+
+#}
+
+{% extends "base.html.j2" %}
+
+{% block content %}
+  <div id="jumbotron" class="jumbotron">
+    <p>Lets check your username!</p>
+
+    {% if report %}
+      <p>Your username passed all checks</p>
+    {% else %}
+      <ul>
+        {% if not hasUpper %}
+          <li>You did not use a lowercase letter</li>
+        {% endif %}
+        {% if not lower %}
+          <li>You did not use a lowercase letter</li>
+        {% endif %}
+        {% if not lower %}
+          <li>You did not use a lowercase letter</li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock %}

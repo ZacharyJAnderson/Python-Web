@@ -1,0 +1,21 @@
+{# index.html #}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Please provide a username that meets the requirements</h1>
+
+      <form aqction="{{url_for('report')}}" method="get">
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Username">
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+
+  </body>
+</html>

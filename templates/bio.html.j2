@@ -1,0 +1,32 @@
+{# BIO HTML J2 TEMPLATE #}
+
+{#
+
+  This Template creates a simple Bio page about myself.
+
+#}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% extends "base.html.j2" %}
+    {% block content %}
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Welcome to my Bio Page</h1>
+          <br><br>
+          <h3>Additional Links:</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/Zachary-J-Anderson">https://www.linkedin.com/</a></li>
+            <li><a href="https://github.com/ZacharyJAnderson">https://github.com/</a></li>
+            <li><a href="https://www.udemy.com/user/zachary-202/">https://www.udemy.com/</a></li>
+          </ul>
+        </div>
+      </div>
+    {% endblock %}
+  </body>
+</html>

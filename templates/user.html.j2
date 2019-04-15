@@ -1,0 +1,28 @@
+{# USER HTML #}
+
+{#
+
+  This Template creates a simple users page.
+
+  KEY POINTS:
+    ** Passing variables and using filters {{name|capitalize}}
+       with Jinja Templates
+
+    ** Using a container and a jumbotron from bootstrap 4. This page does not
+       include any links for bootstrap, another advantage we leverage from
+       extending base.html.j2
+
+#}
+
+{% extends 'base.html.j2' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>This is the user page</h1>
+    <h3>Weclome {{name|capitalize}}</h3>
+  </div>
+</div>
+
+{% endblock %}

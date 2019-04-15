@@ -1,0 +1,31 @@
+{# FORM HTML --> extends "base.html.j2" #}
+
+{#
+
+  This Template creates a simple HTML form.
+
+  KEY POINTS:
+    ** Usage of placeholders instead of default values for text areas.
+
+    ** Using a jumbotron from bootstrap 4. This page does not include any links
+       for bootstrap, another advantage we leverage from extending base.html.j2
+
+#}
+
+{% extends "base.html.j2" %}
+{% block content %}
+  <div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to the SignUp page</h1>
+        <p>This form was written in HTML</p><br>
+        <p>Fill out the form. We don't have a databse setup yet...</p>
+        <form class="" action="{{url_for('thankyou')}}">
+          <label for="first">First Name:</label>
+          <input type="text" name="first" placeholder="first name">
+          <label for="last">Last Name:</label>
+          <input type="text" name="last" placeholder="last name">
+          <input type="submit" name="submitName" value="Submit Form">
+        </form>
+    </div>
+  </div>
+{% endblock %}
